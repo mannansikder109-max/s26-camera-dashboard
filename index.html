@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>S26 Ultra 200MP Camera Tech Dashboard</title>
+  <meta name="description" content="A static dashboard explaining the Samsung Galaxy S26 Ultra 200MP camera system, pixel binning, OIS, AF, and Camera2 API concepts." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <nav class="topbar">
+      <div class="brand">
+        <span class="brand-badge">S26</span>
+        <span class="brand-text">Camera Dashboard</span>
+      </div>
+
+      <div class="nav-links">
+        <a href="#overview">Overview</a>
+        <a href="#sensor">Sensor</a>
+        <a href="#binning">Binning</a>
+        <a href="#pipeline">Pipeline</a>
+      </div>
+    </nav>
+
+    <div class="hero-content">
+      <p class="eyebrow">Samsung Galaxy S26 Ultra</p>
+      <h1>200MP Camera Tech Dashboard</h1>
+      <p class="hero-copy">
+        Explore the camera sensor, pixel binning modes, stabilization concepts, and the mobile imaging pipeline in one clean dashboard.
+      </p>
+      <div class="hero-actions">
+        <a class="btn primary" href="#overview">Explore Dashboard</a>
+        <a class="btn secondary" href="#pipeline">View Pipeline</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="overview" class="section grid-2">
+      <article class="card">
+        <h2>Overview</h2>
+        <p>
+          This dashboard is designed as a static portfolio project for the Samsung Galaxy S26 Ultra camera system.
+          It presents technical ideas in a simple, visual format.
+        </p>
+      </article>
+
+      <article class="card">
+        <h2>Key Topics</h2>
+        <ul class="feature-list">
+          <li>200MP sensor basics</li>
+          <li>Pixel binning modes</li>
+          <li>OIS and autofocus</li>
+          <li>RAW capture and manual controls</li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="sensor" class="section">
+      <div class="card">
+        <h2>Sensor Section</h2>
+        <div class="stats">
+          <div class="stat">
+            <span class="stat-label">Resolution</span>
+            <span class="stat-value">200MP</span>
+          </div>
+          <div class="stat">
+            <span class="stat-label">Mode</span>
+            <span class="stat-value">High Detail</span>
+          </div>
+          <div class="stat">
+            <span class="stat-label">Use</span>
+            <span class="stat-value">Photography</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="binning" class="section grid-3">
+      <article class="card">
+        <h2>Native</h2>
+        <p>Full 200MP capture for maximum detail.</p>
+      </article>
+      <article class="card">
+        <h2>4-in-1</h2>
+        <p>Grouped pixels for a balanced 50MP output.</p>
+      </article>
+      <article class="card">
+        <h2>16-in-1</h2>
+        <p>Extra light sensitivity for low-light scenes.</p>
+      </article>
+    </section>
+
+    <section id="pipeline" class="section">
+      <div class="card">
+        <h2>Imaging Pipeline</h2>
+        <ol class="pipeline">
+          <li>Light enters the sensor.</li>
+          <li>The sensor converts light into data.</li>
+          <li>The ISP processes color and noise.</li>
+          <li>The image is saved or displayed.</li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span data-year></span> S26 Ultra Camera Dashboard</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
