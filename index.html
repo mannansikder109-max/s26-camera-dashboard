@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#07111f" />
+  <meta name="description" content="Galaxy S26 Ultra 200MP Camera Technology Dashboard." />
+  <title>S26 Ultra 200MP Camera Tech Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="page-glow glow-one"></div>
+  <div class="page-glow glow-two"></div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="S26 Ultra Dashboard home">
+        <span class="brand-mark">S</span>
+        <span>
+          <strong>S26 ULTRA</strong>
+          <small>CAMERA TECH DASHBOARD</small>
+        </span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="#overview">Overview</a>
+        <a href="#sensor">Sensor</a>
+        <a href="#binning">Binning</a>
+        <a href="#controls">Controls</a>
+        <a href="#pipeline">Pipeline</a>
+      </nav>
+
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <aside class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu-head">
+      <span>Navigation</span>
+      <button id="menuClose" class="icon-button" type="button" aria-label="Close menu">×</button>
+    </div>
+    <nav>
+      <a href="#overview">Overview</a>
+      <a href="#sensor">Sensor Architecture</a>
+      <a href="#binning">Pixel Binning</a>
+      <a href="#stabilization">OIS & AF</a>
+      <a href="#controls">Camera2 & RAW</a>
+      <a href="#pipeline">Image Pipeline</a>
+      <a href="#changelog">Changelog</a>
+    </nav>
+  </aside>
+  <div class="menu-backdrop" id="menuBackdrop"></div>
+
+  <main id="top">
+    <section class="hero container" id="overview">
+      <div class="hero-copy">
+        <div class="status-row">
+          <span class="status-dot"></span>
+          <span>TECHNICAL CAMERA SYSTEM / V2.0</span>
+        </div>
+
+        <h1>200MP imaging,<br /><span>decoded.</span></h1>
+
+        <p class="hero-lead">
+          An interactive technical dashboard for understanding high-resolution mobile imaging,
+          pixel binning, stabilization, RAW capture, and the smartphone ISP pipeline.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button button-primary" href="#binning">Explore Pixel Binning <span>↗</span></a>
+          <a class="button button-ghost" href="#pipeline">Open Data Pipeline</a>
+        </div>
+
+        <div class="hero-tags">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JavaScript</span>
+          <span>Vercel Ready</span>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-label="Camera lens visual">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="lens-core">
+          <div class="lens-ring ring-one"></div>
+          <div class="lens-ring ring-two"></div>
+          <div class="lens-ring ring-three"></div>
+          <div class="lens-shine"></div>
+          <span>200<br /><small>MP</small></span>
+        </div>
+        <div class="visual-label label-top">ISOCELL / HIGH RES</div>
+        <div class="visual-label label-bottom">TETRA²PIXEL</div>
+      </div>
+    </section>
+
+    <section class="container metrics-grid" aria-label="Key metrics">
+      <article class="metric-card accent-purple">
+        <span class="metric-kicker">NATIVE RESOLUTION</span>
+        <strong>200<span>MP</span></strong>
+        <p>Maximum spatial detail for bright, controlled scenes.</p>
+      </article>
+      <article class="metric-card accent-cyan">
+        <span class="metric-kicker">PIXEL PITCH</span>
+        <strong>0.6<span>μm</span></strong>
+        <p>Effective pixel size expands through binning.</p>
+      </article>
+      <article class="metric-card accent-orange">
+        <span class="metric-kicker">LOW-LIGHT OUTPUT</span>
+        <strong>2.4<span>μm</span></strong>
+        <p>16-in-1 style grouping improves light collection.</p>
+      </article>
+      <article class="metric-card accent-green">
+        <span class="metric-kicker">CAPTURE MODE</span>
+        <strong>RAW<span>+</span></strong>
+        <p>Manual control and computational photography workflows.</p>
+      </article>
+    </section>
+
+    <section class="container content-section" id="sensor">
+      <div class="section-heading">
+        <div>
+          <span class="section-index">01 / SENSOR ARCHITECTURE</span>
+          <h2>The pixel is the<br /><em>starting point.</em></h2>
+        </div>
+        <p>
+          A high-resolution sensor does not always output its maximum pixel count.
+          The capture mode changes how neighboring pixels cooperate with the ISP.
+        </p>
+      </div>
+
+      <div class="sensor-grid">
+        <article class="panel sensor-main">
+          <div class="panel-topline">
+            <span class="panel-label">MAIN WIDE CAMERA / CONCEPTUAL PROFILE</span>
+            <span class="live-badge"><i></i> ACTIVE</span>
+          </div>
+          <div class="sensor-visual">
+            <div class="sensor-chip">
+              <div class="chip-grid" id="chipGrid"></div>
+              <span class="chip-text">200MP</span>
+            </div>
+            <div class="sensor-callouts">
+              <div><b>01</b><span>High-density pixel array</span></div>
+              <div><b>02</b><span>On-chip conversion path</span></div>
+              <div><b>03</b><span>ISP-ready image data</span></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="panel spec-panel">
+          <div class="panel-topline">
+            <span class="panel-label">SYSTEM PARAMETERS</span>
+            <span class="panel-code">S26 / CAM-01</span>
+          </div>
+          <div class="spec-list">
+            <div><span>Resolution</span><strong>200 MP</strong></div>
+            <div><span>Pixel architecture</span><strong>Quad / 16-cell</strong></div>
+            <div><span>Focus system</span><strong>Multi-directional PDAF</strong></div>
+            <div><span>Stabilization</span><strong>OIS-assisted</strong></div>
+            <div><span>Video target</span><strong>High-frame-rate UHD</strong></div>
+          </div>
+          <p class="disclaimer">
+            Technical values are presented as an educational dashboard model.
+            Confirm device-specific values with official Samsung documentation.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="container content-section" id="binning">
+      <div class="section-heading">
+        <div>
+          <span class="section-index">02 / PIXEL BINNING</span>
+          <h2>One sensor.<br /><em>Three strategies.</em></h2>
+        </div>
+        <p>
+          Select a mode to see how resolution, effective pixel size, light behavior,
+          and practical use change together.
+        </p>
+      </div>
+
+      <div class="binning-layout">
+        <article class="panel binning-visual-panel">
+          <div class="mode-tabs" role="tablist" aria-label="Pixel binning modes">
+            <button class="mode-tab active" data-mode="native" type="button">NATIVE <small>200MP</small></button>
+            <button class="mode-tab" data-mode="quad" type="button">4-IN-1 <small>50MP</small></button>
+            <button class="mode-tab" data-mode="sixteen" type="button">16-IN-1 <small>12.5MP</small></button>
+          </div>
+
+          <div class="binning-display">
+            <div class="grid-stage">
+              <div class="pixel-grid" id="pixelGrid"></div>
+              <div class="grid-caption" id="gridCaption">FULL RESOLUTION ARRAY</div>
+            </div>
+
+            <div class="binning-readout">
+              <div>
+                <span class="readout-label">ACTIVE MODE</span>
+                <strong id="modeName">NATIVE</strong>
+              </div>
+              <div>
+                <span class="readout-label">EFFECTIVE PIXEL</span>
+                <strong id="pixelSize">0.6 μm</strong>
+              </div>
+              <div>
+                <span class="readout-label">OUTPUT</span>
+                <strong id="outputSize">200 MP</strong>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="panel mode-info-panel">
+          <span class="panel-label">MODE ANALYSIS</span>
+          <h3 id="modeTitle">Native 200MP</h3>
+          <p id="modeDescription">
+            The full-resolution mode preserves the maximum amount of spatial information.
+            It is best suited to bright scenes, landscapes, architecture, and crops.
+          </p>
+
+          <div class="light-meter">
+            <div class="meter-head"><span>LIGHT COLLECTION</span><strong id="lightValue">HIGH DETAIL</strong></div>
+            <div class="meter-track"><span id="lightBar"></span></div>
+          </div>
+
+          <div class="use-case" id="useCase">
+            <span>BEST FOR</span>
+            <strong>Daylight / detailed crops</strong>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="container content-section" id="stabilization">
+      <div class="section-heading">
+        <div>
+          <span class="section-index">03 / STABILIZATION & FOCUS</span>
+          <h2>Steady hands.<br /><em>Fast decisions.</em></h2>
+        </div>
+      </div>
+
+      <div class="feature-grid">
+        <article class="panel feature-card">
+          <div class="feature-icon">◎</div>
+          <span class="panel-label">OPTICAL IMAGE STABILIZATION</span>
+          <h3>OIS</h3>
+          <p>
+            Lens or sensor movement compensates for small hand movements.
+            This helps reduce blur during longer exposures and steadies video framing.
+          </p>
+          <div class="mini-diagram ois-diagram"><span></span><i></i><b></b></div>
+        </article>
+
+        <article class="panel feature-card">
+          <div class="feature-icon">✣</div>
+          <span class="panel-label">PHASE DETECTION AUTOFOCUS</span>
+          <h3>Multi-directional PDAF</h3>
+          <p>
+            Focus pixels estimate phase differences so the camera can decide
+            whether to move focus forward or backward, improving acquisition speed.
+          </p>
+          <div class="focus-lines"><span></span><span></span><span></span><span></span></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="container content-section" id="controls">
+      <div class="section-heading">
+        <div>
+          <span class="section-index">04 / DEVELOPER ACCESS</span>
+          <h2>More control.<br /><em>More latitude.</em></h2>
+        </div>
+        <p>
+          Camera2 API capabilities determine how much control an app can request from
+          the camera stack. RAW and manual controls are useful when the photographer wants
+          to shape the final image instead of accepting only the default JPEG pipeline.
+        </p>
+      </div>
+
+      <div class="control-grid">
+        <article class="panel control-card">
+          <div class="control-number">01</div>
+          <span class="panel-label">CAMERA2 API</span>
+          <h3>FULL / LEVEL 3</h3>
+          <p>
+            Higher hardware capability levels can expose more manual controls,
+            sensor streams, and capture combinations to compatible camera apps.
+          </p>
+          <div class="control-tags"><span>EXPOSURE</span><span>FOCUS</span><span>ISO</span></div>
+        </article>
+
+        <article class="panel control-card">
+          <div class="control-number">02</div>
+          <span class="panel-label">RAW CAPTURE</span>
+          <h3>DNG WORKFLOW</h3>
+          <p>
+            RAW preserves sensor-oriented data for later adjustment of white balance,
+            exposure, highlights, shadows, and color in a compatible editor.
+          </p>
+          <div class="control-tags"><span>LATITUDE</span><span>EDITING</span><span>ARCHIVE</span></div>
+        </article>
+
+        <article class="panel control-card">
+          <div class="control-number">03</div>
+          <span class="panel-label">MANUAL CONTROL</span>
+          <h3>EXPOSURE STACK</h3>
+          <p>
+            Shutter speed, ISO, focus distance, and white balance can be coordinated
+            for repeatable results when the app and device expose those controls.
+          </p>
+          <div class="control-tags"><span>SHUTTER</span><span>WB</span><span>FOCUS</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="container content-section" id="pipeline">
+      <div class="section-heading">
+        <div>
+          <span class="section-index">05 / IMAGE DATA PIPELINE</span>
+          <h2>From photons<br /><em>to pixels.</em></h2>
+        </div>
+        <p>
+          Tap any stage to open a short explanation of the data state and the system
+          responsible for that step.
+        </p>
+      </div>
+
+      <div class="pipeline-panel panel">
+        <div class="pipeline-line"></div>
+        <button class="pipeline-step" data-step="scene" type="button">
+          <span class="step-number">01</span><span class="step-dot"></span>
+          <strong>SCENE</strong><small>light / motion</small>
+        </button>
+        <button class="pipeline-step" data-step="sensor" type="button">
+          <span class="step-number">02</span><span class="step-dot"></span>
+          <strong>SENSOR</strong><small>photons / charge</small>
+        </button>
+        <button class="pipeline-step" data-step="isp" type="button">
+          <span class="step-number">03</span><span class="step-dot"></span>
+          <strong>ISP</strong><small>color / noise</small>
+        </button>
+        <button class="pipeline-step" data-step="ml" type="button">
+          <span class="step-number">04</span><span class="step-dot"></span>
+          <strong>ML / HDR</strong><small>scene intelligence</small>
+        </button>
+        <button class="pipeline-step" data-step="output" type="button">
+          <span class="step-number">05</span><span class="step-dot"></span>
+          <strong>OUTPUT</strong><small>JPEG / HEIF / RAW</small>
+        </button>
+      </div>
+
+      <div class="pipeline-note panel">
+        <span class="panel-label">SELECTED STAGE</span>
+        <h3 id="pipelineTitle">Scene input</h3>
+        <p id="pipelineDescription">
+          Light, subject movement, and lens conditions define the raw information entering the system.
+        </p>
+      </div>
+    </section>
+
+    <section class="container changelog-section" id="changelog">
+      <div class="changelog-head">
+        <span class="section-index">CHANGELOG</span>
+        <span class="version-pill">V2.0 / STABLE</span>
+      </div>
+      <div class="changelog-list">
+        <div><b>NEW</b><span>Responsive hamburger navigation with overlay and Escape support.</span></div>
+        <div><b>NEW</b><span>Interactive pixel-binning grid with live mode readouts.</span></div>
+        <div><b>NEW</b><span>OIS, PDAF, Camera2 API, RAW, and manual-control sections.</span></div>
+        <div><b>IMPROVED</b><span>Data pipeline stages now open contextual explanations.</span></div>
+      </div>
+    </section>
+  </main>
+
+  <dialog class="info-dialog" id="infoDialog">
+    <button class="dialog-close" id="dialogClose" type="button" aria-label="Close dialog">×</button>
+    <span class="section-index">PIPELINE STAGE</span>
+    <h2 id="dialogTitle">Stage</h2>
+    <p id="dialogText">Explanation</p>
+  </dialog>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span data-year></span> S26 Ultra Camera Tech Dashboard</span>
+      <span>Built for developers & power users</span>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
